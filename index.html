@@ -26,9 +26,9 @@
       >
       <nav>
         <ul class="header-navigation">
-          <li><a href="#agencja">Agencja</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
+          <li class="header-navigation-item"><a href="#agencja" class="is-active">Agencja</a></li>
+          <li class="header-navigation-item"><a href="portfolio.html">Portfolio</a></li>
+          <li class="header-navigation-item"><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
       <ul class="header-address">
@@ -63,7 +63,10 @@
     <main class="container">
       <section class="motto section">
         <h1 id="webstudio">Efektywne Rozwiązania Dla Waszego Biznesu</h1>
-        <button type="button" class="button-alternative">Zamów usługe</button>
+        <button type="button" class="button-alternative" data-modal-open>Zamów usługe</button>
+        <div class="modal is-hidden" data-modal>    
+        <button data-modal-close>X</button>
+        </div>
       </section>
       <section class="section">
         <ul class="text-main">
@@ -113,29 +116,32 @@
         <div class="content-width">
           <h2 class="header-second">Czym się zajmujemy</h2>
           <ul class="section-two-pictures">
-            <li>
+            <li class="section-two-pictures-img">
               <img
-                src="images/img1.jpg"
+              src="images/img1.jpg"
                 width="370"
                 height="294"
                 alt="praca przy komputerze"
               />
+              <p class="section-two-pictures-text">aplikacje komputerowe</p>
             </li>
-            <li>
+            <li class="section-two-pictures-img">
               <img
                 src="images/img2.jpg"
                 width="370"
                 height="294"
                 alt="praca przy komputerze"
               />
+              <p class="section-two-pictures-text">aplikacje mobilne</p>
             </li>
-            <li>
+            <li class="section-two-pictures-img">
               <img
                 src="images/img3.jpg"
                 width="370"
                 height="294"
                 alt="praca przy komputerze"
               />
+              <p class="section-two-pictures-text">rozwiązania graficzne</p>
             </li>
           </ul>
         </div>
@@ -543,5 +549,6 @@
         </section>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

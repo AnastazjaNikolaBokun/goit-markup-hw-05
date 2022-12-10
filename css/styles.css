@@ -61,22 +61,54 @@ a:focus {
 
 .header-text {
   display: flex;
-  margin: 0 auto;
-  padding: 16px 21px 17px 21px;
-  justify-content: center;
+  margin: 0px;
+  padding: 0 215px 0 215px;
+  min-height: 80px;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px var(--border-header) solid;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.17;
+  position: relative;
+  /* border-color: pink;
+  border-width: 1px;
+  border-style: dashed; */
 }
 
 .header-navigation {
   display: flex;
-  width: 347px;
+  margin: 0 auto;
   justify-content: space-between;
-  padding: 0 0 0 93px;
   list-style: none;
+  position: absolute;
+  bottom: -1px;
+  left: 453px;
+  padding: 0;
+  /* border-color: pink;
+  border-width: 1px;
+  border-style: dashed; */
+}
+
+.header-navigation-item:nth-child(-n + 2) {
+  padding-right: 46px;
+  padding-bottom: 0;
+}
+
+.is-active {
+  color: var(--mark-color);
+}
+
+.is-active::after {
+  content: "";
+  width: 53px;
+  height: 4px;
+  background-size: contain;
+  display: block;
+  background-color: var(--mark-color);
+  color: var(--mark-color);
+  border-radius: 2px;
+  margin-top: 28px;
 }
 
 .header-address {
@@ -262,6 +294,29 @@ a:focus {
   padding: 50px 15px 0 15px;
   margin: 0 auto;
   justify-content: space-between;
+}
+
+.section-two-pictures-img {
+  position: relative;
+  max-width: 370px;
+  max-height: 294px;
+}
+
+.section-two-pictures-img > .section-two-pictures-text {
+  color: var(--text-color-third);
+
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-transform: uppercase;
+  background-color: rgba(47, 48, 58, 0.8);
+  min-width: 370px;
+  min-height: 70px;
+  text-align: center;
+  padding: 27px;
 }
 
 #agencja {
@@ -479,4 +534,25 @@ a:focus {
 .icon-clients:focus {
   fill: var(--mark-color);
   border-color: var(--mark-color);
+}
+
+.modal {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
+  transition-property: visibility, opacity, transform;
+  transition-duration: 2s;
+  transform: translateX(-50%) translateY(-50%) scale(1) rotate(180deg);
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%) scale(0) rotate(0deg);
 }
