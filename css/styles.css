@@ -19,6 +19,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a:hover,
@@ -111,6 +112,11 @@ a:focus {
   margin-top: 28px;
 }
 
+.two::after {
+  width: 58px;
+  height: 4px;
+}
+
 .header-address {
   display: flex;
   width: 666px;
@@ -132,6 +138,7 @@ a:focus {
 .list:hover svg,
 .list:focus svg {
   fill: var(--mark-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list:hover a,
@@ -168,6 +175,9 @@ a:focus {
   font-size: 16px;
   line-height: 1.62;
   cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-main:hover,
@@ -360,18 +370,44 @@ a:focus {
   margin: 0 auto;
   max-width: 1200px;
   cursor: pointer;
+  color: var(--text-color-second);
 }
 
 .imagedecor-two figure {
   background-color: var(--text-color-third);
   margin: 0;
   width: 370px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.imagedecor-two-picture {
+  position: relative;
+  overflow: hidden;
+}
+
+.imagedecor-two-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 49px 45px 49px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: var(--text-color-third);
+  transform: translateY(100%);
+  font-size: 18px;
+  line-height: 1.55;
 }
 
 .imagedecor-two figure:hover,
 .imagedecor-two figure:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.imagedecor-two figure:hover .imagedecor-two-overlay {
+  transform: translateY(0%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .imagedecor-two figcaption {
@@ -391,6 +427,7 @@ a:focus {
   font-weight: 700;
   line-height: 2;
   margin: 0;
+  color: var(--text-color);
 }
 
 .imagedecor-two p {
@@ -398,7 +435,6 @@ a:focus {
   font-weight: 400;
   line-height: 1.87;
   margin: 0;
-  color: var(--text-color-second);
 }
 
 .icon-header {
@@ -435,6 +471,7 @@ a:focus {
   max-height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-footer-background:hover,
@@ -479,6 +516,7 @@ a:focus {
   height: 44px;
   padding: 14px;
   fill: var(--icon-team-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-team:hover,
@@ -491,6 +529,7 @@ a:focus {
   max-height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-team-background:hover,
@@ -528,6 +567,8 @@ a:focus {
   border-color: var(--icon-team-color);
   border-width: 1px;
   border-style: solid;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-clients:hover,
