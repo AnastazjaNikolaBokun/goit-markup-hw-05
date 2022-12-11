@@ -26,8 +26,12 @@
       >
       <nav>
         <ul class="header-navigation">
-          <li class="header-navigation-item"><a href="#agencja" class="is-active">Agencja</a></li>
-          <li class="header-navigation-item"><a href="portfolio.html">Portfolio</a></li>
+          <li class="header-navigation-item">
+            <a href="#agencja" class="is-active">Agencja</a>
+          </li>
+          <li class="header-navigation-item">
+            <a href="portfolio.html">Portfolio</a>
+          </li>
           <li class="header-navigation-item"><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
@@ -63,10 +67,27 @@
     <main class="container">
       <section class="motto section">
         <h1 id="webstudio">Efektywne Rozwiązania Dla Waszego Biznesu</h1>
-        <button type="button" class="button-alternative" data-modal-open>Zamów usługe</button>
-        <div class="modal is-hidden" data-modal>    
-        <button data-modal-close>X</button>
-        </div>
+        <button type="button" class="button-alternative" data-modal-open>
+          Zamów usługe
+        </button>
+        <ul class="backdrop is-hidden" data-modal>
+          <li class="modal">
+            <button type="button" class="button-modal" data-modal-close>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="11"
+                height="11"
+                viewBox="0 0 11 11"
+                fill="none"
+              >
+                <path
+                  d="M11 1.10786L9.89214 0L5.5 4.39214L1.10786 0L0 1.10786L4.39214 5.5L0 9.89214L1.10786 11L5.5 6.60786L9.89214 11L11 9.89214L6.60786 5.5L11 1.10786Z"
+                  fill="black"
+                />
+              </svg>
+            </button>
+          </li>
+        </ul>
       </section>
       <section class="section">
         <ul class="text-main">
@@ -118,7 +139,7 @@
           <ul class="section-two-pictures">
             <li class="section-two-pictures-img">
               <img
-              src="images/img1.jpg"
+                src="images/img1.jpg"
                 width="370"
                 height="294"
                 alt="praca przy komputerze"
