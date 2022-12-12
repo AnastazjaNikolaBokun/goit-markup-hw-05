@@ -592,6 +592,9 @@ a:focus {
   opacity: 1;
   transition: opacity 250ms ease;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .is-hidden {
@@ -619,14 +622,17 @@ a:focus {
 
 .button-modal {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 8px;
+  right: 8px;
   background-color: var(--text-color-third);
   border-radius: 50%;
   width: 30px;
   height: 30px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button-modal:hover,
