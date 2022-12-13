@@ -607,11 +607,8 @@ a:focus {
 .modal {
   height: 581px;
   width: 528px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
   background-color: var(--text-color-third);
-  position: absolute;
+  position: relative;
   visibility: visible;
   opacity: 1;
   transition: opacity 250ms ease;
